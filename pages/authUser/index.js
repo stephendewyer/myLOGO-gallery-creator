@@ -12,7 +12,7 @@ const AuthUser = ({userImages, user}) => {
   for (let i = 0; i < userImages.gallery_images.length; i++) {
     images.push(
       {
-        imageSrc: userImages.gallery_images[i].image.substring(8),
+        imageSrc: userImages.gallery_images[i].image,
         id: uuidv4(),
       }
       

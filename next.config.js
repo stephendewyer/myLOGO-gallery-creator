@@ -15,6 +15,9 @@ module.exports = (phase) => {
         mongodb_password: 'WOAFZAKvojPo0TTM',
         mongodb_clustername: 'cluster0',
         mongodb_database: 'development',
+        NEXTAUTH_SECRET: "ac69f709e8989043e27df5ddeca612dd",
+        CLOUDINARY_URL: "cloudinary://953156592933315:xopLcT5s2cTlKb8ucw_oWjpFDp0@dsztjf1mf",
+        indexURL: "http://localhost:3000",
       },
     };
   }
@@ -29,6 +32,9 @@ module.exports = (phase) => {
       mongodb_password: 'WOAFZAKvojPo0TTM',
       mongodb_clustername: 'cluster0',
       mongodb_database: 'production',
+      NEXTAUTH_SECRET: "ac69f709e8989043e27df5ddeca612dd",
+      CLOUDINARY_URL: "cloudinary://953156592933315:xopLcT5s2cTlKb8ucw_oWjpFDp0@dsztjf1mf",
+      indexURL: "https://my-logo-gallery-creator.vercel.app/"
     },
   };
   

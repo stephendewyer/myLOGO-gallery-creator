@@ -11,19 +11,41 @@
     width: 100%;
 }
 
-.navTabs {
+.navBar {
     position: absolute;
-    right: 0;
-    top: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-content: flex-start;
+    height: 0;
+    overflow: visible;
+}
+
+.homeLink {
+    display: relative;
+    max-width: 160px;
+    width: 100%;
+    margin: 0.6rem auto auto 0.6rem;
+}
+
+.navTabs {
+    position: absolute;
+    display: flex;
+    flex-direction: row;   
+    right: 0;
+    top: 0;
 }
 
 @media (max-width: 600px) {
 
     .indexTab {
-        padding: 3rem 0.1rem 0.4rem 0.1rem;
+        padding: 4rem 0.1rem 0.4rem 0.1rem;
+    }
+
+    .homeLink {
+        max-width: 80px;
+        margin: 0.4rem auto auto 0.4rem;
     }
 
 }

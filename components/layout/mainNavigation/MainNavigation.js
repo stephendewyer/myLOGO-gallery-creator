@@ -1,6 +1,7 @@
 import BoxButton from '../../boxNavTab/BoxNavTab';
 import styles from './MainNavigation.module.css';
 import MyLink from '../../../public/util/MyLink';
+import HomeTab from '../../homeTab/HomeTab';
 import { useSession, signOut } from "next-auth/react";
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -56,27 +57,38 @@ const MainNavigation = () => {
                 </h1>
             </div>
             {!session && <div 
-                className={styles.navTabs}
+                className={styles.navBar}
                 aria-hidden={(session) ? "true" : "false"}
             >
-                <MyLink 
-                    href="/createAccount" 
-                    passHref 
-                    aria-label="link to create account page"
-                >
-                    <BoxButton pageIsActive={createPageIsActive}>
-                        create
-                    </BoxButton>
-                </MyLink>
-                <MyLink 
-                    href="/login" 
-                    passHref 
-                    aria-label="link to login"
-                >
-                    <BoxButton pageIsActive={indexPageIsActive}>
-                        login
-                    </BoxButton>
-                </MyLink>
+                <div className={styles.homeLink}>
+                    <MyLink 
+                        href="/" 
+                        passHref 
+                        aria-label="link to index page"
+                    >
+                        <HomeTab pageIsActive={createPageIsActive} />
+                    </MyLink>
+                </div>
+                <div className={styles.navTabs}>
+                    <MyLink 
+                        href="/createAccount" 
+                        passHref 
+                        aria-label="link to create account page"
+                    >
+                        <BoxButton pageIsActive={createPageIsActive}>
+                            create
+                        </BoxButton>
+                    </MyLink>
+                    <MyLink 
+                        href="/login" 
+                        passHref 
+                        aria-label="link to login"
+                    >
+                        <BoxButton pageIsActive={indexPageIsActive}>
+                            login
+                        </BoxButton>
+                    </MyLink>
+                </div>
             </div>}
             {session && <div 
                 className={styles.navTabs}

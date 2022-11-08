@@ -13,10 +13,13 @@ import FormInput from '../../../components/forms/input/FormInput';
 import PillButton from '../../../components/buttons/pill_button/PillButton';
 
 
-async function createPost( body ) {
+async function createPost( user_email, uploadedImageURL, altText ) {
   const response = await fetch('/api/fileUpload', {
     method: "POST",
-    body,
+    body: JSON.stringify({ user_email, uploadedImageURL, altText }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
   });
   const data = await response.json();
 
@@ -25,7 +28,7 @@ async function createPost( body ) {
   }
 }
 
-const AuthUser = ({userImages, user}) => {
+const EditLogoGallery = ({userImages, user}) => {
 
   const router = useRouter();
 
@@ -56,8 +59,8 @@ const AuthUser = ({userImages, user}) => {
   for (let i = 0; i < userImages.gallery_images.length; i++) {
     images.push(
       {
-        imageSrc: userImages.gallery_images[i].image.substring(8),
-        id:userImages.gallery_images[i].id,
+        imageSrc: userImages.gallery_images[i].image,
+        id: userImages.gallery_images[i].id,
       }
       
     )
@@ -130,10 +133,11 @@ const AuthUser = ({userImages, user}) => {
     const fileReader = new FileReader();
     if (file && file.type.match('image.*')) {
       fileReader.onload = function(event) {
-        setImage(event.target.result);
+          setImage(event.target.result);
       }
       fileReader.readAsDataURL(file);
-    } 
+    }
+
     if (imageRef.current.value === '' && !enteredImageIsTouched) {
       setEnteredImageIsValid(false);
       setEnteredImageIsValidType(true);
@@ -152,9 +156,11 @@ const AuthUser = ({userImages, user}) => {
 
   async function handleFormData(event) {
 
-    let altText = altTextRef.current.value;
-
     event.preventDefault();
+
+    let uploadedImageURL = null;
+
+    let altText = altTextRef.current.value;
 
     // optional: add client-side validation
     
@@ -163,14 +169,41 @@ const AuthUser = ({userImages, user}) => {
 
     setRequestStatus('pending');
 
-    const body = new FormData();
+    // get the file from the form
 
-    body.append('altText', altText);
-    body.append('image', imageInput);
+    const form = event.currentTarget;
+    const fileInput = Array.from(form.elements).find(({name}) => name === 'file');
+
+    // console.log(fileInput, altText);
+
+    const formData = new FormData();
+
+    for (const fileToUpload of fileInput.files) {
+      formData.append('file', fileToUpload);
+    };
+
+    // upload the file to Cloudinary and get image URL
+
+    formData.append('upload_preset', 'my-uploads');
+
+    const dataCloudinary = await fetch('https://api.cloudinary.com/v1_1/dsztjf1mf/image/upload', {
+      method: 'POST',
+      body: formData,
+    }).then(response => response.json());
+
+    // load the uploaded file URL in a variable
+
+    uploadedImageURL = dataCloudinary.secure_url;
+
+    console.log(uploadedImageURL);
+
+    // send the image URL to an API to save in MongoDB
 
     try {
       await createPost(
-          body
+        user_email,
+        uploadedImageURL, 
+        altText,
       );
       setRequestStatus('success');
       setImage(null);
@@ -276,6 +309,7 @@ const AuthUser = ({userImages, user}) => {
                   <input 
                       type="file" 
                       id="floatingInput"
+                      name="file"
                       className={styles.inputfile}
                       placeholder="enter file"
                       ref={imageRef}  
@@ -292,6 +326,7 @@ const AuthUser = ({userImages, user}) => {
                             isvalid={enteredAltTextIsValid} 
                             type="text" 
                             id="floatingInput"
+                            name="alt text"
                             placeholder="enter alternative text"
                             ref={altTextRef}  
                             onChange={altTextChangeHandler} 
@@ -419,4 +454,4 @@ export async function getServerSideProps(context) {
     // end GET authenticated user gallery images
 }
 
-export default AuthUser;
+export default EditLogoGallery;

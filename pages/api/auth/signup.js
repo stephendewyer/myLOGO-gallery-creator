@@ -56,23 +56,27 @@ async function handler(req, res) {
 
     const hashedPassword = await hashPassword(password);
 
+    const indexURLAdd = process.env.indexURL;
+
+    console.log(indexURLAdd);
+
     // get the default image URLs
 
-    const image1src = './public/uploads/logo01.jpg';
-    const image2src = './public/uploads/logo02.png';
-    const image3src = './public/uploads/logo03.jpg';
-    const image4src = './public/uploads/logo04.png';
-    const image5src = './public/uploads/logo05.png';
-    const image6src = './public/uploads/logo06.png';
-    const image7src = './public/uploads/logo07.png';
-    const image8src = './public/uploads/logo08.jpg';
-    const image9src = './public/uploads/logo09.png';
-    const image10src = './public/uploads/logo10.jpg';
-    const image11src = './public/uploads/logo11.png';
-    const image12src = './public/uploads/logo12.jpg';
-    const image13src = './public/uploads/logo13.jpg';
-    const image14src = './public/uploads/logo14.jpeg';
-    const image15src = './public/uploads/logo15.jpg';
+    const image1src = `${indexURLAdd}/uploads/logo01.jpg`;
+    const image2src = `${indexURLAdd}/uploads/logo02.png`;
+    const image3src = `${indexURLAdd}/uploads/logo03.jpg`;
+    const image4src = `${indexURLAdd}/uploads/logo04.png`;
+    const image5src = `${indexURLAdd}/uploads/logo05.png`;
+    const image6src = `${indexURLAdd}/uploads/logo06.png`;
+    const image7src = `${indexURLAdd}/uploads/logo07.png`;
+    const image8src = `${indexURLAdd}/uploads/logo08.jpg`;
+    const image9src = `${indexURLAdd}/uploads/logo09.png`;
+    const image10src = `${indexURLAdd}/uploads/logo10.jpg`;
+    const image11src = `${indexURLAdd}/uploads/logo11.png`;
+    const image12src = `${indexURLAdd}/uploads/logo12.jpg`;
+    const image13src = `${indexURLAdd}/uploads/logo13.jpg`;
+    const image14src = `${indexURLAdd}/uploads/logo14.jpeg`;
+    const image15src = `${indexURLAdd}/uploads/logo15.jpg`;
     
     const defaultImages = [
       {

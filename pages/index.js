@@ -202,6 +202,7 @@ export default function Index() {
                   src={imgSrc} 
                   className="image"
                   alt="logo" 
+                  priority
                 />
               </div>
             )
