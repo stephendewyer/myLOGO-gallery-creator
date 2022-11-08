@@ -1,0 +1,40 @@
+.inputErrorMessage {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 4px 0 0 0;
+}
+
+.inputErrorIcon {
+    width: 24px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.inputErrorParagraph {
+    color: #894A44;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 750px) {
+
+    .inputErrorMessage {
+        padding: 2px 0 0 0;
+    }
+    
+    .inputErrorIcon {
+        width: 18px;
+        margin-left: 5px;
+        padding: 0;
+    }
+
+    .inputErrorParagraph {
+        font-size: 16px;
+    }
+
+}

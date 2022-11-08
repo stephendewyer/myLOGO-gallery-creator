@@ -1,0 +1,15 @@
+.inputFormSection {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 751px) {
+
+    .inputFormSection {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+}

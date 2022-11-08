@@ -1,0 +1,49 @@
+.notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #E0E7F5;
+  text-align: center;
+}
+  
+.flash_title {
+  margin: auto;
+  font-size: 24px;
+}
+  
+.flash_message {
+  margin: auto;
+  font-size: 22px;
+}
+  
+.success {
+  background-color: #E9EADE;
+  color: #627E4D;
+}
+  
+.error {
+  background-color: #FDDFD2;
+  color: #914732;
+}
+  
+@media (max-width: 768px) {
+  .notification {
+    padding: 20px;
+  }
+
+  .flash_title {
+    margin: auto;
+    font-size: 20px;
+  }
+    
+  .flash_message {
+    margin: auto;
+    font-size: 18px;
+  }
+}
+  

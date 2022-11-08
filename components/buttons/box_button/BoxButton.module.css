@@ -1,0 +1,35 @@
+.box_button {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:none;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:#F4E5BA;
+    background-color: #7F7F8A;
+    text-align:center;
+    transition: all 0.15s;
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+    font-family: "IBM-Plex-Sans";
+}
+
+.box_button:hover{
+    color:#F4E5BA;
+    background-color: #636B7D;
+}
+
+.box_button:active{
+    color:#D89679;
+}
+
+@media all and (max-width:751px){
+
+    .box_button {
+        display: block;
+        margin: 0.4em auto;
+        font-size: 16px;
+    }
+
+}

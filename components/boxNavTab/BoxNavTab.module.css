@@ -1,0 +1,53 @@
+.boxButton {
+    display:inline-block;
+    padding:0.5em 3em;
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:#E1E5DD;
+    background-color:#5A5B5B;
+    text-align:center;
+    transition: all 0.15s;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+    font-family: "IBM-Plex-Sans";
+}
+
+.boxButton:hover{
+    color:#7A5954;
+    background-color: #BEC7B6;
+}
+
+.boxButtonActive {
+    display:inline-block;
+    padding:0.5em 3em;
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:#7A5954;
+    background-color: #BEC7B6;
+    text-align:center;
+    transition: all 0.15s;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+    font-family: "IBM-Plex-Sans";
+}
+
+.boxButtonActive:active{
+    color:#5A5B5B;
+    background-color: #EFD5C9;
+}
+
+@media all and (max-width:751px){
+
+    .boxButton  {
+        display: block;
+        margin: 0.4em auto;
+        font-size: 16px;
+    }
+
+}
