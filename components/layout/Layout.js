@@ -1,7 +1,6 @@
-import React, { Fragment, useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
 import MainNavigation from './mainNavigation/MainNavigation';
 import Footer from './footer/Footer';
-
 import styles from './Layout.module.css';
 
 const Layout = (props) => {
@@ -71,7 +70,11 @@ const Layout = (props) => {
     }, [node]);
 
     return (
-        <Fragment>
+
+        <div
+            className={styles.page_container}
+        >
+
             <MainNavigation />
             <main 
                 role="main"
@@ -91,7 +94,7 @@ const Layout = (props) => {
                     <Footer />
                 </div>
             </div>
-        </Fragment>
+        </div>
     )
 }
 

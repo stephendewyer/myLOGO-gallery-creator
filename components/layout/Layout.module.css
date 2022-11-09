@@ -1,0 +1,12 @@
+.page_container {
+    position: relative;
+    min-height: 100vh;
+    font-family: "IBM-Plex-Sans";
+}
+
+.footer_container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

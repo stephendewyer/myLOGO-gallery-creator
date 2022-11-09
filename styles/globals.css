@@ -71,6 +71,8 @@ input[type="file"]::file-selector-button {
 
 .container {
   padding: 0;
+  margin: 0;
+  position: relative;
 }
 
 .heading01 {
@@ -144,6 +146,25 @@ input[type=file]::file-selector-button:active {
 }
 
 @media all and (max-width:751px){
+
+  html,
+  body {
+    font-size: 18px;
+    background-color: #EFEDEF;
+    color: #50514B;
+  }
+
+  input { 
+    font-size: 18px;
+  }
+
+  textarea {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 18px;
+  }
 
   .heading01 {
     font-size: 22px;

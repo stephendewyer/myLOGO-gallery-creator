@@ -246,11 +246,11 @@ const Login = () => {
                 )}
                 <div className={classes.login_information}>
                     <h3 className="heading03">
-                        Don&apos;t have an account?
+                        don&apos;t have an account?
                     </h3>
                     <MyLink href="/createAccount" passHref aria-label="link to create account page">
                         <BoxButton>
-                            Create an account
+                            create an account
                         </BoxButton>
                     </MyLink>
                 </div>
