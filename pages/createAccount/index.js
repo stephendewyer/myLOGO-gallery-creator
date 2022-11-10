@@ -216,6 +216,8 @@ const CreateAccount = () => {
             <Head>
                 <title>myLOGO gallery creator | create account</title>
                 <meta name="description" content="registration form to myLOGO gallery creator account" />
+                <meta property="og:image" content="https://my-logo-gallery-creator.vercel.app/images/index_screengrab.JPG" />
+                <meta property="og:url" content="https://my-logo-gallery-creator.vercel.app/createAccount" />
                 <meta name="robots" content="index, follow" />
             </Head>
 

@@ -186,6 +186,7 @@ export default function Index() {
       <Head>
         <title>myLOGO gallery creator</title>
         <meta name="description" content="an image gallery that randomly rotates images" />
+        <meta property="og:image" content="https://my-logo-gallery-creator.vercel.app/images/index_screengrab.JPG" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">

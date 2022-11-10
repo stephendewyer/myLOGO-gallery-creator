@@ -120,7 +120,8 @@ const AuthUser = ({userImages, user}) => {
       <Head>
         <title>myLOGO gallery creator | my gallery</title>
         <meta name="description" content="my gallery of logos" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="https://my-logo-gallery-creator.vercel.app/images/index_screengrab.JPG" />
+        <meta property="og:url" content="https://my-logo-gallery-creator.vercel.app/AuthUser" />
       </Head>
       <div className="container">
         <h2 className="heading02">

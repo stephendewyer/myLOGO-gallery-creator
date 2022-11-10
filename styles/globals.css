@@ -93,7 +93,7 @@ input[type="file"]::file-selector-button {
   font-family: "IBM-Plex-Sans";
   width: 100%;
   text-align: center;
-  color: #50514B;
+  color: #636B7D;
   text-align: center;
 }
 
@@ -104,6 +104,7 @@ input[type="file"]::file-selector-button {
   font-family: "IBM-Plex-Sans";
   width: 100%;
   text-align: center;
+  color: #745B59;
 }
 
 .image {

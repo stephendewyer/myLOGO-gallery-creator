@@ -182,6 +182,8 @@ const Login = () => {
             <Head>
                 <title>myLOGO gallery creator | login</title>
                 <meta name="robots" content="index, follow" />
+                <meta property="og:image" content="https://my-logo-gallery-creator.vercel.app/images/index_screengrab.JPG" />
+                <meta property="og:url" content="https://my-logo-gallery-creator.vercel.app/login" />
             </Head>
             <div className="container">
                <h1 className="heading02">
@@ -251,6 +253,16 @@ const Login = () => {
                     <MyLink href="/createAccount" passHref aria-label="link to create account page">
                         <BoxButton>
                             create an account
+                        </BoxButton>
+                    </MyLink>
+                </div>
+                <div className={classes.login_information}>
+                    <h3 className="heading03">
+                        forgot your password?
+                    </h3>
+                    <MyLink href="/reset_password" passHref aria-label="link to reset password page">
+                        <BoxButton>
+                            reset password
                         </BoxButton>
                     </MyLink>
                 </div>
