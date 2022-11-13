@@ -1,9 +1,5 @@
-// import { dbConnect } from ...
-// import { ObjectId } from 'mongodb';
-// import { getSession } from 'next-auth/client';
 import { connectToDatabase } from '../../library/db';
 import nc from 'next-connect';
-import multer from 'multer';
 
 export const config = {
     api: {
