@@ -117,17 +117,17 @@ export default function Index() {
   // if cycle05 is initialized
   // replace cycle04images 2, 4, 9 with images 2, 4, 7
   const cycle05images = [...cycle04];
-  cycle05images.splice(2, 1, {...images[2]});
-  cycle05images.splice(4, 1, {...images[4]});
-  cycle05images.splice(9, 1, {...images[7]});
+  cycle05images.splice(2, 1, {...images[7]});
+  cycle05images.splice(4, 1, {...images[2]});
+  cycle05images.splice(9, 1, {...images[4]});
   const cycle05 = cycle05images;  
 
   // if cycle06 is initialized
   // replace cycle05images 9, 10, 11 with images 1, 7, 10
   const cycle06images = [...cycle05];
-  cycle06images.splice(0, 1, {...images[9]});
+  cycle06images.splice(0, 1, {...images[11]});
   cycle06images.splice(1, 1, {...images[10]});
-  cycle06images.splice(11, 1, {...images[11]});
+  cycle06images.splice(11, 1, {...images[9]});
   const cycle06 = cycle06images;  
 
   const imageCycles = [
