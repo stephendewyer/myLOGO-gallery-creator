@@ -13,7 +13,7 @@ module.exports = (phase) => {
       env: {
         mongodb_username: 'stephendewyer',
         mongodb_password: 'WOAFZAKvojPo0TTM',
-        mongodb_clustername: 'cluster0',
+        mongodb_clustername: 'cluster01',
         mongodb_database: 'development',
         NEXTAUTH_SECRET: "ac69f709e8989043e27df5ddeca612dd",
         CLOUDINARY_URL: "cloudinary://953156592933315:xopLcT5s2cTlKb8ucw_oWjpFDp0@dsztjf1mf",
@@ -31,7 +31,7 @@ module.exports = (phase) => {
     env: {
       mongodb_username: 'stephendewyer',
       mongodb_password: 'WOAFZAKvojPo0TTM',
-      mongodb_clustername: 'cluster0',
+      mongodb_clustername: 'cluster01',
       mongodb_database: 'production',
       NEXTAUTH_SECRET: "ac69f709e8989043e27df5ddeca612dd",
       CLOUDINARY_URL: "cloudinary://953156592933315:xopLcT5s2cTlKb8ucw_oWjpFDp0@dsztjf1mf",
