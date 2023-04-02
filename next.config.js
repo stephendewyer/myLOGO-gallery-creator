@@ -9,6 +9,9 @@ module.exports = (phase) => {
       i18n: {
         locales: ["en-US"],
         defaultLocale: "en-US",
+      },
+      env: {
+        indexURL: "http://localhost:3000",
       }
     };
   }
@@ -17,6 +20,9 @@ module.exports = (phase) => {
     i18n: {
       locales: ["en-US"],
       defaultLocale: "en-US",
+    },
+    env: {
+      indexURL: "https://my-logo-gallery-creator.vercel.app",
     }
   };
   
