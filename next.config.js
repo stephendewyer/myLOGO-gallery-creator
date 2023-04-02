@@ -8,10 +8,11 @@ module.exports = (phase) => {
       reactStrictMode: true,
       i18n: {
         locales: ["en-US"],
-        defaultLocale: "en-US",
+        defaultLocale: "en-US"
       },
       env: {
         indexURL: "http://localhost:3000",
+        NEXTAUTH_SECRET: "ac69f709e8989043e27df5ddeca612dd",
         MONGODB_DATABASE: 'development'
       }
     };
@@ -20,10 +21,11 @@ module.exports = (phase) => {
     reactStrictMode: true,
     i18n: {
       locales: ["en-US"],
-      defaultLocale: "en-US",
+      defaultLocale: "en-US"
     },
     env: {
       indexURL: "https://my-logo-gallery-creator.vercel.app",
+      NEXTAUTH_SECRET: "ac69f709e8989043e27df5ddeca612dd",
       MONGODB_DATABASE: 'production'
     }
   };
