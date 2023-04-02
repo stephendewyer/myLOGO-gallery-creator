@@ -42,7 +42,7 @@ async function handler(req, res) {
     // begin send email verification
 
     const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey(process.env.SendGrid_API_key)
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
         to: validUserEmail,
         from: 'stephen.dewyer@stephengdewyer.info',
