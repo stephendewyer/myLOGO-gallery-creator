@@ -12,6 +12,7 @@ module.exports = (phase) => {
       },
       env: {
         indexURL: "http://localhost:3000",
+        MONGODB_DATABASE: 'development'
       }
     };
   }
@@ -23,6 +24,7 @@ module.exports = (phase) => {
     },
     env: {
       indexURL: "https://my-logo-gallery-creator.vercel.app",
+      MONGODB_DATABASE: 'production'
     }
   };
   

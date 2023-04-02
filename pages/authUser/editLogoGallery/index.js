@@ -186,7 +186,7 @@ const EditLogoGallery = ({userImages, user}) => {
 
     formData.append('upload_preset', 'my-uploads');
 
-    const dataCloudinary = await fetch('https://api.cloudinary.com/v1_1/dsztjf1mf/image/upload', {
+    const dataCloudinary = await fetch('https://api.cloudinary.com/v1_1/mylogogallerycreator/image/upload', {
       method: 'POST',
       body: formData,
     }).then(response => response.json());
