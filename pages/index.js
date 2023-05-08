@@ -2,7 +2,6 @@ import { Fragment, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
-import { getSession } from "next-auth/react";
 import styles from '../styles/Index.module.css';
 import image1src from '../public/images/logos/logo01.jpg';
 import image2src from '../public/images/logos/logo02.png';
@@ -212,21 +211,4 @@ export default function Index() {
       </div>
     </Fragment>
   )
-}
-
-export async function getServerSideProps(context) {
-  const session = await getSession({ req: context.req });
-
-  if (session) {
-      return {
-          redirect: {
-              destination: '/authUser',
-              permanent: false,
-          }
-      };
-  }
-
-  return {
-      props: { session },
-  };
 }
