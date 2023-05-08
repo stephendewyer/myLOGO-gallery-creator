@@ -5,11 +5,11 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div className={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.footer_info} >
-                developed by <Link href="https://www.stephendewyerwebwork.com" passHref target="_blank">stephen garrett dewyer</Link> | {year}
+                <Link href="https://www.stephendewyerwebwork.com" passHref target="_blank">stephen garrett dewyer | {year}</Link> 
             </div>
-        </div>
+        </footer>
     )
 
 }
