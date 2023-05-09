@@ -188,14 +188,14 @@ const ResetPassword = (props) => {
                         {emailErrorMessage}
                     </InputFormSection>
                     <div className={classes.form_buttons} >
-                        <PillButton type='submit' >
-                            send email
-                        </PillButton>
                         <MyLink href={'/'} passHref aria-label="link to index page">
                             <PillButtonSecondary>
                                 cancel
                             </PillButtonSecondary>
                         </MyLink>
+                        <PillButton type='submit' >
+                            send email
+                        </PillButton>
                     </div>
                 </form>
                 {notification && (

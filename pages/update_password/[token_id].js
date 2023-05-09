@@ -171,14 +171,14 @@ const UpdatePassword = (validatedUserEmail, paramsID) => {
                         }
                     </InputFormSection>
                     <div className={classes.form_buttons} >
-                        <PillButton type="submit" >
-                            update
-                        </PillButton>
                         <MyLink href={'/'} passHref aria-label="link to index page">
                             <PillButtonSecondary>
                                 cancel
                             </PillButtonSecondary>
                         </MyLink>
+                        <PillButton type="submit" >
+                            update
+                        </PillButton>
                     </div>
                 </form>
                 {notification && (
