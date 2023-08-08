@@ -2,9 +2,9 @@ import classes from './PillButtonSecondary.module.css';
 
 const PillButtonSecondary = (props) => {
     return (
-        <button className={classes.pill_button}>
+        <div className={classes.pill_button}>
             {props.children}
-        </button>
+        </div>
     );
 };
 
