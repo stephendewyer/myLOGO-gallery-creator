@@ -54,6 +54,7 @@
         font-size: 18px;
         flex-direction: column-reverse;
         margin-top: 20px;
+        align-items: center;
     }
     
     .login_information {
